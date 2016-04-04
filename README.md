@@ -14,3 +14,8 @@ directory using r10k.
 ## Starter code
 
 Note that this repository includes some incomplete starter code.
+
+## Edit
+Sampath edited this part.
+point 1
+point 2
