@@ -45,12 +45,17 @@ node default {
   notify { 'test message': 
   message=> "Hello, my name is ${::hostname}": 
   }
-  fie {'motd':
-  ensure => file,
-  path => '/etc/motd',
-  content = > 'lovely day':
-  owner  => 'root':
-  group   => 'root':
-  mode  => '0644':
-  }
+#  fie {'motd':
+#  ensure => file,
+#  path => '/etc/motd',
+#  content = > 'lovely day':
+#  owner  => 'root':
+#  group   => 'root':
+#  mode  => '0644':
+#  }
+exec {'motd':
+command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd".
+creates => '/etc/motd',
+}
+  
 }
