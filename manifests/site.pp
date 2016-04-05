@@ -43,7 +43,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { 'test message': 
-  message=> "Hello, my name is ${::hostname}": 
+    message => "Hello, my name is ${::hostname}",
   }
 #  fie {'motd':
 #  ensure => file,
@@ -53,11 +53,10 @@ node default {
 #  group   => 'root':
 #  mode  => '0644':
 #  }
-exec {'motd':
-command => 'cowsay does it work':
-#command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-path => '/usr/local/bin',
-#creates => '/etc/motd',
-}
+  exec {'motd':
+    command => 'cowsay does it work',
+    path    => '/usr/local/bin',
+    creates => '/etc/motd',
+  }
   
 }
