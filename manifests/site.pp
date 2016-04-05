@@ -54,9 +54,10 @@ node default {
 #  mode  => '0644':
 #  }
 exec {'motd':
-command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+command => 'cowsay does it work':
+#command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
 path => '/usr/local/bin',
-creates => '/etc/motd',
+#creates => '/etc/motd',
 }
   
 }
