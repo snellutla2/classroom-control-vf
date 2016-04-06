@@ -45,6 +45,6 @@ node default {
   notify { 'test message': 
     message => "Hello, my name is ${::hostname}",
   }
-include users
+#include users
   
 }
