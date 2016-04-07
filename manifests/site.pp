@@ -47,9 +47,9 @@ $vmname = capitalize($::virtual)
 notify { "This is a ${vmname} virtual machine.": }
 }
   
-#  notify { 'test message': 
-#    message => "Hello2, my name is ${::hostname}",
-#  }
+  notify { 'test message': 
+    message => "Hello2, my name is ${::hostname}",
+  }
 #include users
   
 }
